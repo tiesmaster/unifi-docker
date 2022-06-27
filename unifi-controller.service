@@ -1,0 +1,12 @@
+[Unit]
+Description=UniFi Controller
+After=docker
+
+[Service]
+Type=simple
+Restart=always
+User=root
+ExecStart=/usr/bin/env docker run --net=host --rm --init -e TZ='Europe/Amsterdam' -v unifi:/unifi --name unifi jacobalberty/unifi
+
+[Install]
+WantedBy=multi-user.target
