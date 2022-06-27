@@ -1,6 +1,6 @@
 [Unit]
 Description=UniFi Controller
-After=docker
+After=docker.service
 
 [Service]
 Type=simple
