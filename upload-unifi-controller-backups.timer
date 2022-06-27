@@ -4,7 +4,7 @@ Requires=upload-unifi-controller-backups.service
 
 [Timer]
 Unit=upload-unifi-controller-backups.service
-OnCalendar=*:0/2
+OnCalendar=*:0/15
 
 [Install]
 WantedBy=timers.target
