@@ -5,7 +5,6 @@ Wants=upload-unifi-controller-backups.timer
 [Service]
 Type=oneshot
 User=ties
-ExecStart=docker cp -a unifi:/unifi/data/backup/autobackup /var/local/unifi_backups
 ExecStart=/usr/local/bin/upload-unifi-backups.sh
 
 [Install]
