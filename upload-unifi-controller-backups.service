@@ -1,0 +1,11 @@
+[Unit]
+Description=Upload UniFi Controller backup files
+Wants=upload-unifi-controller-backups.timer
+
+[Service]
+Type=oneshot
+User=ties
+ExecStart=docker cp -a unifi:/unifi/data/backup/autobackup /var/local/unifi_backups
+
+[Install]
+WantedBy=multi-user.target
