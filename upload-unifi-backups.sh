@@ -2,7 +2,8 @@
 
 cd /var/local/unifi_backups/autobackup
 
-for i in *
+for file in *
 do
-    dbxcli put $i unifi_backups/$i
+    echo Uploading file ${file}
+    dbxcli put ${file} unifi_backups/${}
 done
