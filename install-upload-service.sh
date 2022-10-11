@@ -3,6 +3,8 @@
 [ -d /var/local/unifi_backups ] || sudo mkdir /var/local/unifi_backups
 sudo chown ties /var/local/unifi_backups
 
+touch /var/local/unifi_backups/dummy.txt
+
 sudo cp upload-unifi-backups.sh /usr/local/bin/
 
 sudo cp upload-unifi-controller-backups.service /etc/systemd/system/
